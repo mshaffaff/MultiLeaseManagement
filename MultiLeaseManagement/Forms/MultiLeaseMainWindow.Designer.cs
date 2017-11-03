@@ -56,22 +56,21 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label17 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbVehicleTypeSearch = new System.Windows.Forms.ComboBox();
+            this.cmbVehicleModelSearch = new System.Windows.Forms.ComboBox();
+            this.chkbVehicleBeforeLeased = new System.Windows.Forms.CheckBox();
+            this.cmbVehicleColor = new System.Windows.Forms.ComboBox();
+            this.cmbVehicleType = new System.Windows.Forms.ComboBox();
+            this.cmbVehicleModel = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnVehicleSearch = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.btnVehicleDelete = new System.Windows.Forms.Button();
+            this.btnVehicleUpdate = new System.Windows.Forms.Button();
+            this.btnVehicleInsert = new System.Windows.Forms.Button();
+            this.txtVehicleValue = new System.Windows.Forms.TextBox();
+            this.txtVehicleKM = new System.Windows.Forms.TextBox();
+            this.txtVehicleYear = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -115,10 +114,13 @@
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.txtCustomerPhoneNumber = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.txtVehicleId = new System.Windows.Forms.MaskedTextBox();
             this.button15 = new System.Windows.Forms.Button();
             this.lblCustomerId = new System.Windows.Forms.Label();
             this.txtCustomerPhoneNumberSearch = new System.Windows.Forms.MaskedTextBox();
+            this.chkbVehicleAutoTransmission = new System.Windows.Forms.CheckBox();
+            this.chkbHasAirCondition = new System.Windows.Forms.CheckBox();
+            this.chkbHasPowerLock = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Customers.SuspendLayout();
@@ -170,6 +172,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(873, 677);
             this.tabControl1.TabIndex = 1;
+            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // Customers
             // 
@@ -370,26 +373,26 @@
             // 
             // Vehicles
             // 
-            this.Vehicles.Controls.Add(this.maskedTextBox2);
+            this.Vehicles.Controls.Add(this.txtVehicleId);
             this.Vehicles.Controls.Add(this.label27);
             this.Vehicles.Controls.Add(this.dataGridView1);
             this.Vehicles.Controls.Add(this.label17);
             this.Vehicles.Controls.Add(this.label11);
-            this.Vehicles.Controls.Add(this.comboBox5);
-            this.Vehicles.Controls.Add(this.comboBox4);
-            this.Vehicles.Controls.Add(this.checkBox1);
-            this.Vehicles.Controls.Add(this.comboBox3);
-            this.Vehicles.Controls.Add(this.comboBox2);
-            this.Vehicles.Controls.Add(this.comboBox1);
+            this.Vehicles.Controls.Add(this.cmbVehicleTypeSearch);
+            this.Vehicles.Controls.Add(this.cmbVehicleModelSearch);
+            this.Vehicles.Controls.Add(this.chkbVehicleBeforeLeased);
+            this.Vehicles.Controls.Add(this.cmbVehicleColor);
+            this.Vehicles.Controls.Add(this.cmbVehicleType);
+            this.Vehicles.Controls.Add(this.cmbVehicleModel);
             this.Vehicles.Controls.Add(this.groupBox1);
-            this.Vehicles.Controls.Add(this.button5);
+            this.Vehicles.Controls.Add(this.btnVehicleSearch);
             this.Vehicles.Controls.Add(this.label9);
-            this.Vehicles.Controls.Add(this.button6);
-            this.Vehicles.Controls.Add(this.button7);
-            this.Vehicles.Controls.Add(this.button8);
-            this.Vehicles.Controls.Add(this.textBox10);
-            this.Vehicles.Controls.Add(this.textBox12);
-            this.Vehicles.Controls.Add(this.textBox13);
+            this.Vehicles.Controls.Add(this.btnVehicleDelete);
+            this.Vehicles.Controls.Add(this.btnVehicleUpdate);
+            this.Vehicles.Controls.Add(this.btnVehicleInsert);
+            this.Vehicles.Controls.Add(this.txtVehicleValue);
+            this.Vehicles.Controls.Add(this.txtVehicleKM);
+            this.Vehicles.Controls.Add(this.txtVehicleYear);
             this.Vehicles.Controls.Add(this.label10);
             this.Vehicles.Controls.Add(this.label12);
             this.Vehicles.Controls.Add(this.label13);
@@ -421,8 +424,10 @@
             this.dataGridView1.Location = new System.Drawing.Point(4, 524);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(855, 110);
             this.dataGridView1.TabIndex = 51;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label17
             // 
@@ -442,66 +447,68 @@
             this.label11.TabIndex = 49;
             this.label11.Text = "Model";
             // 
-            // comboBox5
+            // cmbVehicleTypeSearch
             // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(209, 431);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(324, 28);
-            this.comboBox5.TabIndex = 48;
+            this.cmbVehicleTypeSearch.FormattingEnabled = true;
+            this.cmbVehicleTypeSearch.Location = new System.Drawing.Point(209, 431);
+            this.cmbVehicleTypeSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbVehicleTypeSearch.Name = "cmbVehicleTypeSearch";
+            this.cmbVehicleTypeSearch.Size = new System.Drawing.Size(324, 28);
+            this.cmbVehicleTypeSearch.TabIndex = 48;
             // 
-            // comboBox4
+            // cmbVehicleModelSearch
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(209, 389);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(324, 28);
-            this.comboBox4.TabIndex = 47;
+            this.cmbVehicleModelSearch.FormattingEnabled = true;
+            this.cmbVehicleModelSearch.Location = new System.Drawing.Point(209, 389);
+            this.cmbVehicleModelSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbVehicleModelSearch.Name = "cmbVehicleModelSearch";
+            this.cmbVehicleModelSearch.Size = new System.Drawing.Size(324, 28);
+            this.cmbVehicleModelSearch.TabIndex = 47;
             // 
-            // checkBox1
+            // chkbVehicleBeforeLeased
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(604, 226);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(154, 24);
-            this.checkBox1.TabIndex = 46;
-            this.checkBox1.Text = "Leased Before";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkbVehicleBeforeLeased.AutoSize = true;
+            this.chkbVehicleBeforeLeased.Location = new System.Drawing.Point(604, 226);
+            this.chkbVehicleBeforeLeased.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chkbVehicleBeforeLeased.Name = "chkbVehicleBeforeLeased";
+            this.chkbVehicleBeforeLeased.Size = new System.Drawing.Size(154, 24);
+            this.chkbVehicleBeforeLeased.TabIndex = 46;
+            this.chkbVehicleBeforeLeased.Text = "Leased Before";
+            this.chkbVehicleBeforeLeased.UseVisualStyleBackColor = true;
             // 
-            // comboBox3
+            // cmbVehicleColor
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(209, 146);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(324, 28);
-            this.comboBox3.TabIndex = 45;
+            this.cmbVehicleColor.FormattingEnabled = true;
+            this.cmbVehicleColor.Location = new System.Drawing.Point(209, 146);
+            this.cmbVehicleColor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbVehicleColor.Name = "cmbVehicleColor";
+            this.cmbVehicleColor.Size = new System.Drawing.Size(324, 28);
+            this.cmbVehicleColor.TabIndex = 45;
             // 
-            // comboBox2
+            // cmbVehicleType
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(209, 106);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(324, 28);
-            this.comboBox2.TabIndex = 44;
+            this.cmbVehicleType.FormattingEnabled = true;
+            this.cmbVehicleType.Location = new System.Drawing.Point(209, 106);
+            this.cmbVehicleType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbVehicleType.Name = "cmbVehicleType";
+            this.cmbVehicleType.Size = new System.Drawing.Size(324, 28);
+            this.cmbVehicleType.TabIndex = 44;
             // 
-            // comboBox1
+            // cmbVehicleModel
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(209, 66);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(324, 28);
-            this.comboBox1.TabIndex = 43;
+            this.cmbVehicleModel.FormattingEnabled = true;
+            this.cmbVehicleModel.Location = new System.Drawing.Point(209, 66);
+            this.cmbVehicleModel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbVehicleModel.Name = "cmbVehicleModel";
+            this.cmbVehicleModel.Size = new System.Drawing.Size(324, 28);
+            this.cmbVehicleModel.TabIndex = 43;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkedListBox1);
-            this.groupBox1.Location = new System.Drawing.Point(597, 66);
+            this.groupBox1.Controls.Add(this.chkbHasPowerLock);
+            this.groupBox1.Controls.Add(this.chkbVehicleAutoTransmission);
+            this.groupBox1.Controls.Add(this.chkbHasAirCondition);
+            this.groupBox1.Location = new System.Drawing.Point(604, 66);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -510,30 +517,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Options";
             // 
-            // checkedListBox1
+            // btnVehicleSearch
             // 
-            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Auto Tarnsmisstion",
-            "Air Condition",
-            "Power Lock"});
-            this.checkedListBox1.Location = new System.Drawing.Point(5, 39);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(212, 66);
-            this.checkedListBox1.TabIndex = 40;
-            this.checkedListBox1.Tag = "";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(209, 473);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(324, 34);
-            this.button5.TabIndex = 39;
-            this.button5.Text = "Search";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnVehicleSearch.Location = new System.Drawing.Point(209, 473);
+            this.btnVehicleSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVehicleSearch.Name = "btnVehicleSearch";
+            this.btnVehicleSearch.Size = new System.Drawing.Size(324, 34);
+            this.btnVehicleSearch.TabIndex = 39;
+            this.btnVehicleSearch.Text = "Search";
+            this.btnVehicleSearch.UseVisualStyleBackColor = true;
+            this.btnVehicleSearch.Click += new System.EventHandler(this.btnVehicleSearch_Click);
             // 
             // label9
             // 
@@ -544,59 +537,63 @@
             this.label9.TabIndex = 37;
             this.label9.Text = ".: Search By Model and Type :.";
             // 
-            // button6
+            // btnVehicleDelete
             // 
-            this.button6.Location = new System.Drawing.Point(429, 310);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(104, 34);
-            this.button6.TabIndex = 36;
-            this.button6.Text = "Delete";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnVehicleDelete.Enabled = false;
+            this.btnVehicleDelete.Location = new System.Drawing.Point(429, 310);
+            this.btnVehicleDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVehicleDelete.Name = "btnVehicleDelete";
+            this.btnVehicleDelete.Size = new System.Drawing.Size(104, 34);
+            this.btnVehicleDelete.TabIndex = 36;
+            this.btnVehicleDelete.Text = "Delete";
+            this.btnVehicleDelete.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnVehicleUpdate
             // 
-            this.button7.Location = new System.Drawing.Point(319, 310);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(104, 34);
-            this.button7.TabIndex = 35;
-            this.button7.Text = "Update";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnVehicleUpdate.Enabled = false;
+            this.btnVehicleUpdate.Location = new System.Drawing.Point(319, 310);
+            this.btnVehicleUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVehicleUpdate.Name = "btnVehicleUpdate";
+            this.btnVehicleUpdate.Size = new System.Drawing.Size(104, 34);
+            this.btnVehicleUpdate.TabIndex = 35;
+            this.btnVehicleUpdate.Text = "Update";
+            this.btnVehicleUpdate.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnVehicleInsert
             // 
-            this.button8.Location = new System.Drawing.Point(209, 310);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(104, 34);
-            this.button8.TabIndex = 34;
-            this.button8.Text = "Insert";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnVehicleInsert.Enabled = false;
+            this.btnVehicleInsert.Location = new System.Drawing.Point(209, 310);
+            this.btnVehicleInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVehicleInsert.Name = "btnVehicleInsert";
+            this.btnVehicleInsert.Size = new System.Drawing.Size(104, 34);
+            this.btnVehicleInsert.TabIndex = 34;
+            this.btnVehicleInsert.Text = "Insert";
+            this.btnVehicleInsert.UseVisualStyleBackColor = true;
+            this.btnVehicleInsert.Click += new System.EventHandler(this.button8_Click);
             // 
-            // textBox10
+            // txtVehicleValue
             // 
-            this.textBox10.Location = new System.Drawing.Point(209, 260);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(324, 27);
-            this.textBox10.TabIndex = 33;
+            this.txtVehicleValue.Location = new System.Drawing.Point(209, 260);
+            this.txtVehicleValue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtVehicleValue.Name = "txtVehicleValue";
+            this.txtVehicleValue.Size = new System.Drawing.Size(324, 27);
+            this.txtVehicleValue.TabIndex = 33;
             // 
-            // textBox12
+            // txtVehicleKM
             // 
-            this.textBox12.Location = new System.Drawing.Point(209, 223);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(324, 27);
-            this.textBox12.TabIndex = 31;
+            this.txtVehicleKM.Location = new System.Drawing.Point(209, 223);
+            this.txtVehicleKM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtVehicleKM.Name = "txtVehicleKM";
+            this.txtVehicleKM.Size = new System.Drawing.Size(324, 27);
+            this.txtVehicleKM.TabIndex = 31;
             // 
-            // textBox13
+            // txtVehicleYear
             // 
-            this.textBox13.Location = new System.Drawing.Point(209, 186);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(324, 27);
-            this.textBox13.TabIndex = 30;
+            this.txtVehicleYear.Location = new System.Drawing.Point(209, 186);
+            this.txtVehicleYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtVehicleYear.Name = "txtVehicleYear";
+            this.txtVehicleYear.Size = new System.Drawing.Size(324, 27);
+            this.txtVehicleYear.TabIndex = 30;
             // 
             // label10
             // 
@@ -1023,13 +1020,13 @@
             this.txtCustomerPhoneNumber.Size = new System.Drawing.Size(324, 27);
             this.txtCustomerPhoneNumber.TabIndex = 55;
             // 
-            // maskedTextBox2
+            // txtVehicleId
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(209, 27);
-            this.maskedTextBox2.Mask = "aaaaa-aaaaa-aaaaa-aaaaa-aaaaa";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(324, 27);
-            this.maskedTextBox2.TabIndex = 56;
+            this.txtVehicleId.Location = new System.Drawing.Point(209, 27);
+            this.txtVehicleId.Mask = "aaaaa-aaaaa-aaaaa-aaaaa";
+            this.txtVehicleId.Name = "txtVehicleId";
+            this.txtVehicleId.Size = new System.Drawing.Size(324, 27);
+            this.txtVehicleId.TabIndex = 56;
             // 
             // button15
             // 
@@ -1058,6 +1055,36 @@
             this.txtCustomerPhoneNumberSearch.Size = new System.Drawing.Size(214, 27);
             this.txtCustomerPhoneNumberSearch.TabIndex = 57;
             // 
+            // chkbVehicleAutoTransmission
+            // 
+            this.chkbVehicleAutoTransmission.AutoSize = true;
+            this.chkbVehicleAutoTransmission.Location = new System.Drawing.Point(20, 33);
+            this.chkbVehicleAutoTransmission.Name = "chkbVehicleAutoTransmission";
+            this.chkbVehicleAutoTransmission.Size = new System.Drawing.Size(188, 24);
+            this.chkbVehicleAutoTransmission.TabIndex = 57;
+            this.chkbVehicleAutoTransmission.Text = "Auto Transmission";
+            this.chkbVehicleAutoTransmission.UseVisualStyleBackColor = true;
+            // 
+            // chkbHasAirCondition
+            // 
+            this.chkbHasAirCondition.AutoSize = true;
+            this.chkbHasAirCondition.Location = new System.Drawing.Point(20, 63);
+            this.chkbHasAirCondition.Name = "chkbHasAirCondition";
+            this.chkbHasAirCondition.Size = new System.Drawing.Size(140, 24);
+            this.chkbHasAirCondition.TabIndex = 58;
+            this.chkbHasAirCondition.Text = "Air Condition";
+            this.chkbHasAirCondition.UseVisualStyleBackColor = true;
+            // 
+            // chkbHasPowerLock
+            // 
+            this.chkbHasPowerLock.AutoSize = true;
+            this.chkbHasPowerLock.Location = new System.Drawing.Point(21, 93);
+            this.chkbHasPowerLock.Name = "chkbHasPowerLock";
+            this.chkbHasPowerLock.Size = new System.Drawing.Size(129, 24);
+            this.chkbHasPowerLock.TabIndex = 59;
+            this.chkbHasPowerLock.Text = "Power Lock";
+            this.chkbHasPowerLock.UseVisualStyleBackColor = true;
+            // 
             // MultiLeaseMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1079,6 +1106,7 @@
             this.Vehicles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.Leaseing.ResumeLayout(false);
             this.Leaseing.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -1120,22 +1148,21 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbVehicleTypeSearch;
+        private System.Windows.Forms.ComboBox cmbVehicleModelSearch;
+        private System.Windows.Forms.CheckBox chkbVehicleBeforeLeased;
+        private System.Windows.Forms.ComboBox cmbVehicleColor;
+        private System.Windows.Forms.ComboBox cmbVehicleType;
+        private System.Windows.Forms.ComboBox cmbVehicleModel;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnVehicleSearch;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Button btnVehicleDelete;
+        private System.Windows.Forms.Button btnVehicleUpdate;
+        private System.Windows.Forms.Button btnVehicleInsert;
+        private System.Windows.Forms.TextBox txtVehicleValue;
+        private System.Windows.Forms.TextBox txtVehicleKM;
+        private System.Windows.Forms.TextBox txtVehicleYear;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
@@ -1180,9 +1207,12 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.MaskedTextBox txtCustomerPhoneNumber;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox txtVehicleId;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Label lblCustomerId;
         private System.Windows.Forms.MaskedTextBox txtCustomerPhoneNumberSearch;
+        private System.Windows.Forms.CheckBox chkbHasPowerLock;
+        private System.Windows.Forms.CheckBox chkbVehicleAutoTransmission;
+        private System.Windows.Forms.CheckBox chkbHasAirCondition;
     }
 }
