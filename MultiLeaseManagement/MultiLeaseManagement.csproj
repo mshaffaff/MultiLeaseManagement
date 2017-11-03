@@ -32,8 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Audit.cs" />
+    <Compile Include="Color.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,13 +69,56 @@
     <Compile Include="Forms\MultiLeaseMainWindow.Designer.cs">
       <DependentUpon>MultiLeaseMainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Leas.cs" />
+    <Compile Include="Lease_Terms.cs" />
+    <Compile Include="LeasingModel.cs" />
+    <Compile Include="Migrations\201711030022503_Initial-Model.cs" />
+    <Compile Include="Migrations\201711030022503_Initial-Model.Designer.cs">
+      <DependentUpon>201711030022503_Initial-Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711030139392_AddActiveFiledToCustomerTable.cs" />
+    <Compile Include="Migrations\201711030139392_AddActiveFiledToCustomerTable.Designer.cs">
+      <DependentUpon>201711030139392_AddActiveFiledToCustomerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711030149364_AddActiveFiledToCustomerTableWithDefaultValue.cs" />
+    <Compile Include="Migrations\201711030149364_AddActiveFiledToCustomerTableWithDefaultValue.Designer.cs">
+      <DependentUpon>201711030149364_AddActiveFiledToCustomerTableWithDefaultValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711030150497_DeleteActiveFiledToCustomerTableWithDefaultValue.cs" />
+    <Compile Include="Migrations\201711030150497_DeleteActiveFiledToCustomerTableWithDefaultValue.Designer.cs">
+      <DependentUpon>201711030150497_DeleteActiveFiledToCustomerTableWithDefaultValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711030152296_AddActiveFiledToCustomerTableWithDefaultValue1.cs" />
+    <Compile Include="Migrations\201711030152296_AddActiveFiledToCustomerTableWithDefaultValue1.Designer.cs">
+      <DependentUpon>201711030152296_AddActiveFiledToCustomerTableWithDefaultValue1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="Payment.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vehicle.cs" />
+    <Compile Include="V_Type.cs" />
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MultiLeaseMainWindow.resx">
       <DependentUpon>MultiLeaseMainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711030022503_Initial-Model.resx">
+      <DependentUpon>201711030022503_Initial-Model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711030139392_AddActiveFiledToCustomerTable.resx">
+      <DependentUpon>201711030139392_AddActiveFiledToCustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711030149364_AddActiveFiledToCustomerTableWithDefaultValue.resx">
+      <DependentUpon>201711030149364_AddActiveFiledToCustomerTableWithDefaultValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711030150497_DeleteActiveFiledToCustomerTableWithDefaultValue.resx">
+      <DependentUpon>201711030150497_DeleteActiveFiledToCustomerTableWithDefaultValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711030152296_AddActiveFiledToCustomerTableWithDefaultValue1.resx">
+      <DependentUpon>201711030152296_AddActiveFiledToCustomerTableWithDefaultValue1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -74,6 +129,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

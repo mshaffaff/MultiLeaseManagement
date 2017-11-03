@@ -34,17 +34,16 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Customers = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnCustomerDelete = new System.Windows.Forms.Button();
+            this.btnCustomerUpdate = new System.Windows.Forms.Button();
+            this.btnCustomerInsert = new System.Windows.Forms.Button();
+            this.txtCustomerPostalCode = new System.Windows.Forms.TextBox();
+            this.txtCustomerProvince = new System.Windows.Forms.TextBox();
+            this.txtCustomerCity = new System.Windows.Forms.TextBox();
+            this.txtCustomerAddress = new System.Windows.Forms.TextBox();
+            this.txtCustomerLastname = new System.Windows.Forms.TextBox();
+            this.txtCustomerFirstname = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -115,9 +114,11 @@
             this.label30 = new System.Windows.Forms.Label();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtCustomerPhoneNumber = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.button15 = new System.Windows.Forms.Button();
+            this.lblCustomerId = new System.Windows.Forms.Label();
+            this.txtCustomerPhoneNumberSearch = new System.Windows.Forms.MaskedTextBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Customers.SuspendLayout();
@@ -172,19 +173,20 @@
             // 
             // Customers
             // 
-            this.Customers.Controls.Add(this.maskedTextBox1);
+            this.Customers.Controls.Add(this.txtCustomerPhoneNumberSearch);
+            this.Customers.Controls.Add(this.lblCustomerId);
+            this.Customers.Controls.Add(this.txtCustomerPhoneNumber);
             this.Customers.Controls.Add(this.button4);
-            this.Customers.Controls.Add(this.textBox8);
             this.Customers.Controls.Add(this.label8);
-            this.Customers.Controls.Add(this.button3);
-            this.Customers.Controls.Add(this.button2);
-            this.Customers.Controls.Add(this.button1);
-            this.Customers.Controls.Add(this.textBox6);
-            this.Customers.Controls.Add(this.textBox5);
-            this.Customers.Controls.Add(this.textBox4);
-            this.Customers.Controls.Add(this.textBox3);
-            this.Customers.Controls.Add(this.textBox2);
-            this.Customers.Controls.Add(this.textBox1);
+            this.Customers.Controls.Add(this.btnCustomerDelete);
+            this.Customers.Controls.Add(this.btnCustomerUpdate);
+            this.Customers.Controls.Add(this.btnCustomerInsert);
+            this.Customers.Controls.Add(this.txtCustomerPostalCode);
+            this.Customers.Controls.Add(this.txtCustomerProvince);
+            this.Customers.Controls.Add(this.txtCustomerCity);
+            this.Customers.Controls.Add(this.txtCustomerAddress);
+            this.Customers.Controls.Add(this.txtCustomerLastname);
+            this.Customers.Controls.Add(this.txtCustomerFirstname);
             this.Customers.Controls.Add(this.label7);
             this.Customers.Controls.Add(this.label6);
             this.Customers.Controls.Add(this.label5);
@@ -211,14 +213,7 @@
             this.button4.TabIndex = 19;
             this.button4.Text = "Search";
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(212, 361);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(215, 27);
-            this.textBox8.TabIndex = 18;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label8
             // 
@@ -229,83 +224,86 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Search By Phone";
             // 
-            // button3
+            // btnCustomerDelete
             // 
-            this.button3.Location = new System.Drawing.Point(432, 310);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 34);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCustomerDelete.Location = new System.Drawing.Point(432, 310);
+            this.btnCustomerDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCustomerDelete.Name = "btnCustomerDelete";
+            this.btnCustomerDelete.Size = new System.Drawing.Size(104, 34);
+            this.btnCustomerDelete.TabIndex = 16;
+            this.btnCustomerDelete.Text = "Delete";
+            this.btnCustomerDelete.UseVisualStyleBackColor = true;
+            this.btnCustomerDelete.Click += new System.EventHandler(this.btnCustomerDelete_Click);
             // 
-            // button2
+            // btnCustomerUpdate
             // 
-            this.button2.Location = new System.Drawing.Point(323, 310);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 34);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCustomerUpdate.Location = new System.Drawing.Point(323, 310);
+            this.btnCustomerUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCustomerUpdate.Name = "btnCustomerUpdate";
+            this.btnCustomerUpdate.Size = new System.Drawing.Size(104, 34);
+            this.btnCustomerUpdate.TabIndex = 15;
+            this.btnCustomerUpdate.Text = "Update";
+            this.btnCustomerUpdate.UseVisualStyleBackColor = true;
+            this.btnCustomerUpdate.Click += new System.EventHandler(this.btnCustomerUpdate_Click);
             // 
-            // button1
+            // btnCustomerInsert
             // 
-            this.button1.Location = new System.Drawing.Point(212, 310);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 34);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Insert";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCustomerInsert.Location = new System.Drawing.Point(212, 310);
+            this.btnCustomerInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCustomerInsert.Name = "btnCustomerInsert";
+            this.btnCustomerInsert.Size = new System.Drawing.Size(104, 34);
+            this.btnCustomerInsert.TabIndex = 14;
+            this.btnCustomerInsert.Text = "Insert";
+            this.btnCustomerInsert.UseVisualStyleBackColor = true;
+            this.btnCustomerInsert.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox6
+            // txtCustomerPostalCode
             // 
-            this.textBox6.Location = new System.Drawing.Point(212, 231);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(324, 27);
-            this.textBox6.TabIndex = 12;
+            this.txtCustomerPostalCode.Location = new System.Drawing.Point(212, 231);
+            this.txtCustomerPostalCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCustomerPostalCode.Name = "txtCustomerPostalCode";
+            this.txtCustomerPostalCode.Size = new System.Drawing.Size(324, 27);
+            this.txtCustomerPostalCode.TabIndex = 12;
             // 
-            // textBox5
+            // txtCustomerProvince
             // 
-            this.textBox5.Location = new System.Drawing.Point(212, 192);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(324, 27);
-            this.textBox5.TabIndex = 11;
+            this.txtCustomerProvince.Location = new System.Drawing.Point(212, 192);
+            this.txtCustomerProvince.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCustomerProvince.Name = "txtCustomerProvince";
+            this.txtCustomerProvince.Size = new System.Drawing.Size(324, 27);
+            this.txtCustomerProvince.TabIndex = 11;
             // 
-            // textBox4
+            // txtCustomerCity
             // 
-            this.textBox4.Location = new System.Drawing.Point(212, 153);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(324, 27);
-            this.textBox4.TabIndex = 10;
+            this.txtCustomerCity.Location = new System.Drawing.Point(212, 153);
+            this.txtCustomerCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCustomerCity.Name = "txtCustomerCity";
+            this.txtCustomerCity.Size = new System.Drawing.Size(324, 27);
+            this.txtCustomerCity.TabIndex = 10;
             // 
-            // textBox3
+            // txtCustomerAddress
             // 
-            this.textBox3.Location = new System.Drawing.Point(212, 112);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(324, 27);
-            this.textBox3.TabIndex = 9;
+            this.txtCustomerAddress.Location = new System.Drawing.Point(212, 112);
+            this.txtCustomerAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCustomerAddress.Name = "txtCustomerAddress";
+            this.txtCustomerAddress.Size = new System.Drawing.Size(324, 27);
+            this.txtCustomerAddress.TabIndex = 9;
             // 
-            // textBox2
+            // txtCustomerLastname
             // 
-            this.textBox2.Location = new System.Drawing.Point(212, 71);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(324, 27);
-            this.textBox2.TabIndex = 8;
+            this.txtCustomerLastname.Location = new System.Drawing.Point(212, 71);
+            this.txtCustomerLastname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCustomerLastname.Name = "txtCustomerLastname";
+            this.txtCustomerLastname.Size = new System.Drawing.Size(324, 27);
+            this.txtCustomerLastname.TabIndex = 8;
             // 
-            // textBox1
+            // txtCustomerFirstname
             // 
-            this.textBox1.Location = new System.Drawing.Point(212, 32);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(324, 27);
-            this.textBox1.TabIndex = 7;
+            this.txtCustomerFirstname.Location = new System.Drawing.Point(212, 32);
+            this.txtCustomerFirstname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCustomerFirstname.Name = "txtCustomerFirstname";
+            this.txtCustomerFirstname.Size = new System.Drawing.Size(324, 27);
+            this.txtCustomerFirstname.TabIndex = 7;
             // 
             // label7
             // 
@@ -1017,13 +1015,13 @@
             this.label31.TabIndex = 88;
             this.label31.Text = "Lease Id";
             // 
-            // maskedTextBox1
+            // txtCustomerPhoneNumber
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(212, 271);
-            this.maskedTextBox1.Mask = "(999) 000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(324, 27);
-            this.maskedTextBox1.TabIndex = 55;
+            this.txtCustomerPhoneNumber.Location = new System.Drawing.Point(212, 271);
+            this.txtCustomerPhoneNumber.Mask = "(999) 000-0000";
+            this.txtCustomerPhoneNumber.Name = "txtCustomerPhoneNumber";
+            this.txtCustomerPhoneNumber.Size = new System.Drawing.Size(324, 27);
+            this.txtCustomerPhoneNumber.TabIndex = 55;
             // 
             // maskedTextBox2
             // 
@@ -1043,6 +1041,23 @@
             this.button15.Text = "Insert";
             this.button15.UseVisualStyleBackColor = true;
             // 
+            // lblCustomerId
+            // 
+            this.lblCustomerId.AutoSize = true;
+            this.lblCustomerId.Location = new System.Drawing.Point(691, 32);
+            this.lblCustomerId.Name = "lblCustomerId";
+            this.lblCustomerId.Size = new System.Drawing.Size(0, 20);
+            this.lblCustomerId.TabIndex = 56;
+            this.lblCustomerId.Visible = false;
+            // 
+            // txtCustomerPhoneNumberSearch
+            // 
+            this.txtCustomerPhoneNumberSearch.Location = new System.Drawing.Point(212, 359);
+            this.txtCustomerPhoneNumberSearch.Mask = "(999) 000-0000";
+            this.txtCustomerPhoneNumberSearch.Name = "txtCustomerPhoneNumberSearch";
+            this.txtCustomerPhoneNumberSearch.Size = new System.Drawing.Size(214, 27);
+            this.txtCustomerPhoneNumberSearch.TabIndex = 57;
+            // 
             // MultiLeaseMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1054,6 +1069,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MultiLeaseMainWindow";
             this.Text = "MultiLeaseMainWindow";
+            this.Load += new System.EventHandler(this.MultiLeaseMainWindow_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -1081,13 +1097,13 @@
         private System.Windows.Forms.ToolStripMenuItem managementToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Customers;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnCustomerInsert;
+        private System.Windows.Forms.TextBox txtCustomerPostalCode;
+        private System.Windows.Forms.TextBox txtCustomerProvince;
+        private System.Windows.Forms.TextBox txtCustomerCity;
+        private System.Windows.Forms.TextBox txtCustomerAddress;
+        private System.Windows.Forms.TextBox txtCustomerLastname;
+        private System.Windows.Forms.TextBox txtCustomerFirstname;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -1098,10 +1114,9 @@
         private System.Windows.Forms.TabPage Vehicles;
         private System.Windows.Forms.TabPage Leaseing;
         private System.Windows.Forms.TabPage Payment;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCustomerDelete;
+        private System.Windows.Forms.Button btnCustomerUpdate;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label11;
@@ -1164,8 +1179,10 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtCustomerPhoneNumber;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Label lblCustomerId;
+        private System.Windows.Forms.MaskedTextBox txtCustomerPhoneNumberSearch;
     }
 }
