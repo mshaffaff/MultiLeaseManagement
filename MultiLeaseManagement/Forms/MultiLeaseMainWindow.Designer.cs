@@ -39,7 +39,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -54,7 +53,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Vehicles = new System.Windows.Forms.TabPage();
-            this.textBox18 = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label17 = new System.Windows.Forms.Label();
@@ -117,6 +115,9 @@
             this.label30 = new System.Windows.Forms.Label();
             this.textBox21 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.button15 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Customers.SuspendLayout();
@@ -171,13 +172,13 @@
             // 
             // Customers
             // 
+            this.Customers.Controls.Add(this.maskedTextBox1);
             this.Customers.Controls.Add(this.button4);
             this.Customers.Controls.Add(this.textBox8);
             this.Customers.Controls.Add(this.label8);
             this.Customers.Controls.Add(this.button3);
             this.Customers.Controls.Add(this.button2);
             this.Customers.Controls.Add(this.button1);
-            this.Customers.Controls.Add(this.textBox7);
             this.Customers.Controls.Add(this.textBox6);
             this.Customers.Controls.Add(this.textBox5);
             this.Customers.Controls.Add(this.textBox4);
@@ -257,14 +258,6 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Insert";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(212, 272);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(324, 27);
-            this.textBox7.TabIndex = 13;
             // 
             // textBox6
             // 
@@ -379,7 +372,7 @@
             // 
             // Vehicles
             // 
-            this.Vehicles.Controls.Add(this.textBox18);
+            this.Vehicles.Controls.Add(this.maskedTextBox2);
             this.Vehicles.Controls.Add(this.label27);
             this.Vehicles.Controls.Add(this.dataGridView1);
             this.Vehicles.Controls.Add(this.label17);
@@ -414,14 +407,6 @@
             this.Vehicles.TabIndex = 1;
             this.Vehicles.Text = "Vehicles Page";
             this.Vehicles.UseVisualStyleBackColor = true;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(209, 30);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(324, 27);
-            this.textBox18.TabIndex = 53;
             // 
             // label27
             // 
@@ -742,6 +727,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
+            this.label21.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label21.Location = new System.Drawing.Point(41, 103);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(140, 20);
@@ -814,6 +800,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label20.Location = new System.Drawing.Point(5, 185);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(83, 20);
@@ -823,6 +810,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label19.Location = new System.Drawing.Point(5, 135);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(119, 20);
@@ -917,9 +905,9 @@
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(41, 60);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(111, 20);
+            this.label25.Size = new System.Drawing.Size(148, 20);
             this.label25.TabIndex = 52;
-            this.label25.Text = "Customer Id";
+            this.label25.Text = "Customer Phone";
             // 
             // label26
             // 
@@ -932,6 +920,7 @@
             // 
             // Payment
             // 
+            this.Payment.Controls.Add(this.button15);
             this.Payment.Controls.Add(this.textBox21);
             this.Payment.Controls.Add(this.label31);
             this.Payment.Controls.Add(this.textBox20);
@@ -1028,6 +1017,32 @@
             this.label31.TabIndex = 88;
             this.label31.Text = "Lease Id";
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(212, 271);
+            this.maskedTextBox1.Mask = "(999) 000-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(324, 27);
+            this.maskedTextBox1.TabIndex = 55;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(209, 27);
+            this.maskedTextBox2.Mask = "aaaaa-aaaaa-aaaaa-aaaaa-aaaaa";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(324, 27);
+            this.maskedTextBox2.TabIndex = 56;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(167, 267);
+            this.button15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(324, 34);
+            this.button15.TabIndex = 90;
+            this.button15.Text = "Insert";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
             // MultiLeaseMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1067,7 +1082,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Customers;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
@@ -1140,7 +1154,6 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.Button button14;
@@ -1151,5 +1164,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.Button button15;
     }
 }
