@@ -21,6 +21,7 @@ namespace MultiLeaseManagement
         public virtual DbSet<Payment> Payments { get; set; }
         public virtual DbSet<V_Type> V_Type { get; set; }
         public virtual DbSet<Vehicle> Vehicles { get; set; }
+        public virtual DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

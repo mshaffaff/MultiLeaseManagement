@@ -19,9 +19,16 @@ namespace MultiLeaseManagement.Forms
     public partial class MultiLeaseMainWindow : Form
     {
 
-        public MultiLeaseMainWindow()
+        public MultiLeaseMainWindow(string Group)
         {
             InitializeComponent();
+            this.lblGroup.Text = Group;
+
+        }
+
+        public MultiLeaseMainWindow()
+        {
+
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -31,6 +38,7 @@ namespace MultiLeaseManagement.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+
 
             var context = new LeasingModel();
             var customer = new Customer
@@ -121,9 +129,47 @@ namespace MultiLeaseManagement.Forms
 
         private void MultiLeaseMainWindow_Load(object sender, EventArgs e)
         {
-            //var context = new LeasingModel();
-            btnCustomerDelete.Enabled = false;
-            btnCustomerUpdate.Enabled = false;
+
+            switch (lblGroup.Text)
+            {
+                case "owner":
+                    btnPaymentUpdate.Visible = false;
+                    btnPaymentDelete.Visible = false;
+                    break;
+
+                case "associate":
+                    btnVehicleDelete.Visible = false;
+                    btnVehicleUpdate.Visible = false;
+                    btnCustomerDelete.Visible = false;
+                    btnLeaseDelete.Visible = false;
+                    btnPaymentInsert.Visible = false;
+                    btnPaymentDelete.Visible = false;
+                    btnPaymentUpdate.Visible = false;
+                    break;
+
+                case "manager":
+                    btnVehicleInsert.Visible = false;
+                    btnVehicleDelete.Visible = false;
+                    btnVehicleUpdate.Visible = false;
+                    btnCustomerInsert.Visible = false;
+                    btnCustomerDelete.Visible = false;
+                    btnLeaseInsert.Visible = false;
+                    btnLeaseDelete.Visible = false;
+                    btnPaymentDelete.Visible = false;
+                    btnPaymentUpdate.Visible = false;
+                    break;
+
+                default:
+                    break;
+
+
+            }
+
+
+
+
+            //btnCustomerDelete.Enabled = false;
+            //btnCustomerUpdate.Enabled = false;
 
 
         }
@@ -177,9 +223,6 @@ namespace MultiLeaseManagement.Forms
             if (e.TabPageIndex == 1)
             {
                 var context = new LeasingModel();
-                //List<Model> models = new List<Model>();
-                //List<Type> types = new List<Type>();
-                //List<Color> colors = new List<Color>();
                 foreach (var model in context.Models)
                 {
                     cmbVehicleModel.Items.Add(model.Model1);
@@ -215,6 +258,13 @@ namespace MultiLeaseManagement.Forms
 
 
 
+            }
+
+            if (e.TabPageIndex == 3)
+            {
+                btnPaymentDelete.Enabled = false;
+                btnPaymentUpdate.Enabled = false;
+                btnPaymentInsert.Enabled = true;
             }
 
 
@@ -465,10 +515,10 @@ namespace MultiLeaseManagement.Forms
 
             try
             {
-               
+
 
                 int leaseId = Convert.ToInt32(txtLeaseLeaseIdSearch.Text);
-                var lease = context.Leases.Single(l => ((l.LeaseID == leaseId) && (l.Active!=false)));
+                var lease = context.Leases.Single(l => ((l.LeaseID == leaseId) && (l.Active != false)));
 
                 if (lease != null)
                 {
@@ -582,9 +632,9 @@ namespace MultiLeaseManagement.Forms
                 dataGridView2.DataSource = null;
             }
 
-            
-            
-            
+
+
+
         }
 
         private void btnLeaseCancelSearch_Click(object sender, EventArgs e)
@@ -606,6 +656,142 @@ namespace MultiLeaseManagement.Forms
             txtLeaseCustomerPhoneNumber.Enabled = true;
             btnLeaseVehicleSearch.Enabled = true;
             btnLeaseCustomerSearch.Enabled = true;
+        }
+
+        private void btnPaymentLeaseIdSearch_Click(object sender, EventArgs e)
+        {
+            var context = new LeasingModel();
+
+            try
+            {
+                int leaseId = Convert.ToInt32(txtPaymentLeaseIdSearch.Text);
+                var lease = context.Leases.Single(l => ((l.LeaseID == leaseId) && (l.Active != false)));
+
+                if (lease != null)
+                {
+                    btnPaymentInsert.Enabled = true;
+                    btnPaymentDelete.Enabled = false;
+                    btnPaymentUpdate.Enabled = false;
+
+                }
+
+                txtPaymentLeaseId.Text = lease.LeaseID.ToString();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("This Lease Contract was not Found ", "Error", MessageBoxButtons.OK);
+            }
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var context = new LeasingModel();
+            int leaseId = Convert.ToInt32(txtPaymentLeaseIdPaymentSearch.Text);
+            var payments = context.Payments
+                .Where(p => p.Lease_ID == leaseId && p.Active != false)
+                .Select(p => new { PaymentId = p.PaymentID, Date = p.Date, Amount = p.Amount }).ToList();
+
+            dataGridView3.DataSource = payments;
+
+        }
+
+        private void btnPaymentInsert_Click(object sender, EventArgs e)
+        {
+            var context = new LeasingModel();
+            try
+            {
+                var payment = new Payment
+                {
+                    Lease_ID = Convert.ToInt32(txtPaymentLeaseId.Text),
+                    Date = dtPaymentDate.Value,
+                    Amount = Convert.ToInt32(txtPaymentAmount.Text)
+
+                };
+
+                context.Payments.Add(payment);
+                context.SaveChanges();
+                MessageBox.Show("Payment is successfuly Inserted ", "Attention", MessageBoxButtons.OK);
+                txtPaymentLeaseIdPaymentSearch.Text = "";
+                txtPaymentLeaseIdSearch.Text = "";
+                txtPaymentAmount.Text = "";
+                txtPaymentLeaseId.Text = "";
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
+
+        }
+
+        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var context = new LeasingModel();
+            if (e.RowIndex == -1)
+                MessageBox.Show("Please Select the Exact Info ", "Error", MessageBoxButtons.OK);
+            else
+            {
+                string myValue = dataGridView3[0, e.RowIndex].Value.ToString();
+                lblPaymentId.Text = myValue;
+                int paymentId = Convert.ToInt32(myValue);
+
+                var Payment = context.Payments.Single(p => (p.PaymentID == paymentId) && (p.Active != false));
+
+                txtPaymentLeaseId.Text = Payment.Lease_ID.ToString();
+                dtPaymentDate.Value = Payment.Date.Value;
+                txtPaymentAmount.Text = Payment.Amount.ToString();
+                btnPaymentInsert.Enabled = false;
+                btnPaymentDelete.Enabled = true;
+                btnPaymentUpdate.Enabled = true;
+
+
+            }
+        }
+
+        private void btnPaymentUpdate_Click(object sender, EventArgs e)
+        {
+            var context = new LeasingModel();
+            int paymentId = Convert.ToInt32(lblPaymentId.Text);
+            var payment = context.Payments.Find(paymentId);
+            payment.Amount = Convert.ToDecimal(txtPaymentAmount.Text);
+            payment.Date = dtPaymentDate.Value;
+            context.SaveChanges();
+            txtPaymentAmount.Text = "";
+            txtPaymentLeaseId.Text = "";
+            dataGridView3.DataSource = null;
+            MessageBox.Show("the Payment Successfuly Updated ", "Attention", MessageBoxButtons.OK);
+
+
+
+
+        }
+
+        private void btnPaymentDelete_Click(object sender, EventArgs e)
+        {
+
+            DialogResult dl = MessageBox.Show("Are You Sure for Deleting This Payment ?", "Attention", MessageBoxButtons.YesNo);
+
+            if (dl == DialogResult.Yes)
+            {
+                var context = new LeasingModel();
+                var payment = context.Payments.Find(Convert.ToInt32(lblPaymentId.Text));
+                payment.Active = false;
+                context.SaveChanges();
+                MessageBox.Show("The Payment is Deleted ", "Attention", MessageBoxButtons.OK);
+                txtPaymentAmount.Text = "";
+                txtPaymentLeaseId.Text = "";
+                dataGridView3.DataSource = null;
+
+            }
+
+
+
         }
     }
 }

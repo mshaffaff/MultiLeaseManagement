@@ -19,5 +19,8 @@ namespace MultiLeaseManagement
         public int? Lease_ID { get; set; }
 
         public virtual Leas Leas { get; set; }
+
+        public bool Active { get; set; }
+
     }
 }
