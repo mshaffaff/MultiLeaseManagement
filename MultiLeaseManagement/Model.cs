@@ -9,7 +9,7 @@ namespace MultiLeaseManagement
     [Table("Model")]
     public partial class Model
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Model()
         {
             Vehicles = new HashSet<Vehicle>();
@@ -20,7 +20,7 @@ namespace MultiLeaseManagement
         [Column("Model")]
         public string Model1 { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Vehicle> Vehicles { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace MultiLeaseManagement
     [Table("Leases")]
     public partial class Leas
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Leas()
         {
             Audits = new HashSet<Audit>();
@@ -38,7 +38,7 @@ namespace MultiLeaseManagement
 
         public int Lease_Terms_ID { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Audit> Audits { get; set; }
 
         public virtual Customer Customer { get; set; }
@@ -47,7 +47,10 @@ namespace MultiLeaseManagement
 
         public virtual Vehicle Vehicle { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Payment> Payments { get; set; }
+
+
+        public bool Active { get; set; }
     }
 }

@@ -92,6 +92,14 @@
     <Compile Include="Migrations\201711030152296_AddActiveFiledToCustomerTableWithDefaultValue1.Designer.cs">
       <DependentUpon>201711030152296_AddActiveFiledToCustomerTableWithDefaultValue1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711060031564_LeaseChanged.cs" />
+    <Compile Include="Migrations\201711060031564_LeaseChanged.Designer.cs">
+      <DependentUpon>201711060031564_LeaseChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711060306489_NewInitialModel.cs" />
+    <Compile Include="Migrations\201711060306489_NewInitialModel.Designer.cs">
+      <DependentUpon>201711060306489_NewInitialModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="Payment.cs" />
@@ -119,6 +127,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711030152296_AddActiveFiledToCustomerTableWithDefaultValue1.resx">
       <DependentUpon>201711030152296_AddActiveFiledToCustomerTableWithDefaultValue1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711060031564_LeaseChanged.resx">
+      <DependentUpon>201711060031564_LeaseChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711060306489_NewInitialModel.resx">
+      <DependentUpon>201711060306489_NewInitialModel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

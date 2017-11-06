@@ -33,6 +33,9 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Customers = new System.Windows.Forms.TabPage();
+            this.txtCustomerPhoneNumberSearch = new System.Windows.Forms.MaskedTextBox();
+            this.lblCustomerId = new System.Windows.Forms.Label();
+            this.txtCustomerPhoneNumber = new System.Windows.Forms.MaskedTextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btnCustomerDelete = new System.Windows.Forms.Button();
@@ -52,6 +55,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Vehicles = new System.Windows.Forms.TabPage();
+            this.txtVehicleId = new System.Windows.Forms.MaskedTextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label17 = new System.Windows.Forms.Label();
@@ -63,6 +67,9 @@
             this.cmbVehicleType = new System.Windows.Forms.ComboBox();
             this.cmbVehicleModel = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkbHasPowerLock = new System.Windows.Forms.CheckBox();
+            this.chkbVehicleAutoTransmission = new System.Windows.Forms.CheckBox();
+            this.chkbHasAirCondition = new System.Windows.Forms.CheckBox();
             this.btnVehicleSearch = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.btnVehicleDelete = new System.Windows.Forms.Button();
@@ -78,49 +85,50 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.Leaseing = new System.Windows.Forms.TabPage();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtLeaseVehicleId = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.btnLeaseVehicleSearch = new System.Windows.Forms.Button();
+            this.btnLeaseCustomerSearch = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtLeaseMonthlyPaymentNumber = new System.Windows.Forms.TextBox();
+            this.txtLeaseMonthlyPatmentAmount = new System.Windows.Forms.TextBox();
+            this.txtLeasePremium = new System.Windows.Forms.TextBox();
+            this.dtLeaseFirstPayment = new System.Windows.Forms.DateTimePicker();
+            this.dtLeaseDate = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtLeaseMileage = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnLeaseDelete = new System.Windows.Forms.Button();
+            this.cmbLeaseYears = new System.Windows.Forms.ComboBox();
+            this.btnLeaseInsert = new System.Windows.Forms.Button();
+            this.btnLeaseUpdate = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.Payment = new System.Windows.Forms.TabPage();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.button14 = new System.Windows.Forms.Button();
-            this.label28 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.btnPaymentInsert = new System.Windows.Forms.Button();
+            this.txtPaymentLeaseId = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtPaymentAmount = new System.Windows.Forms.TextBox();
+            this.dtPaymentDate = new System.Windows.Forms.DateTimePicker();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.txtCustomerPhoneNumber = new System.Windows.Forms.MaskedTextBox();
-            this.txtVehicleId = new System.Windows.Forms.MaskedTextBox();
-            this.button15 = new System.Windows.Forms.Button();
-            this.lblCustomerId = new System.Windows.Forms.Label();
-            this.txtCustomerPhoneNumberSearch = new System.Windows.Forms.MaskedTextBox();
-            this.chkbVehicleAutoTransmission = new System.Windows.Forms.CheckBox();
-            this.chkbHasAirCondition = new System.Windows.Forms.CheckBox();
-            this.chkbHasPowerLock = new System.Windows.Forms.CheckBox();
+            this.txtPaymentLeaseIdSearch = new System.Windows.Forms.TextBox();
+            this.btnPaymentLeaseIdSearch = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtLeaseCustomerPhoneNumber = new System.Windows.Forms.MaskedTextBox();
+            this.lblLeaseCutomerId = new System.Windows.Forms.Label();
+            this.lblLeaseTermId = new System.Windows.Forms.Label();
+            this.btnLeaseLeaseIdSearch = new System.Windows.Forms.Button();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtLeaseLeaseIdSearch = new System.Windows.Forms.TextBox();
+            this.lblLeaseId = new System.Windows.Forms.Label();
+            this.btnLeaseCancelSearch = new System.Windows.Forms.Button();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Customers.SuspendLayout();
@@ -131,6 +139,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.Payment.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -142,7 +151,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(873, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(878, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -170,7 +179,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(873, 677);
+            this.tabControl1.Size = new System.Drawing.Size(873, 729);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
@@ -202,10 +211,35 @@
             this.Customers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Customers.Name = "Customers";
             this.Customers.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Customers.Size = new System.Drawing.Size(865, 644);
+            this.Customers.Size = new System.Drawing.Size(865, 696);
             this.Customers.TabIndex = 0;
             this.Customers.Text = "Customers Page";
             this.Customers.UseVisualStyleBackColor = true;
+            // 
+            // txtCustomerPhoneNumberSearch
+            // 
+            this.txtCustomerPhoneNumberSearch.Location = new System.Drawing.Point(212, 359);
+            this.txtCustomerPhoneNumberSearch.Mask = "(999) 000-0000";
+            this.txtCustomerPhoneNumberSearch.Name = "txtCustomerPhoneNumberSearch";
+            this.txtCustomerPhoneNumberSearch.Size = new System.Drawing.Size(214, 27);
+            this.txtCustomerPhoneNumberSearch.TabIndex = 57;
+            // 
+            // lblCustomerId
+            // 
+            this.lblCustomerId.AutoSize = true;
+            this.lblCustomerId.Location = new System.Drawing.Point(691, 32);
+            this.lblCustomerId.Name = "lblCustomerId";
+            this.lblCustomerId.Size = new System.Drawing.Size(0, 20);
+            this.lblCustomerId.TabIndex = 56;
+            this.lblCustomerId.Visible = false;
+            // 
+            // txtCustomerPhoneNumber
+            // 
+            this.txtCustomerPhoneNumber.Location = new System.Drawing.Point(212, 271);
+            this.txtCustomerPhoneNumber.Mask = "(999) 000-0000";
+            this.txtCustomerPhoneNumber.Name = "txtCustomerPhoneNumber";
+            this.txtCustomerPhoneNumber.Size = new System.Drawing.Size(324, 27);
+            this.txtCustomerPhoneNumber.TabIndex = 55;
             // 
             // button4
             // 
@@ -404,10 +438,18 @@
             this.Vehicles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Vehicles.Name = "Vehicles";
             this.Vehicles.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Vehicles.Size = new System.Drawing.Size(865, 644);
+            this.Vehicles.Size = new System.Drawing.Size(865, 696);
             this.Vehicles.TabIndex = 1;
             this.Vehicles.Text = "Vehicles Page";
             this.Vehicles.UseVisualStyleBackColor = true;
+            // 
+            // txtVehicleId
+            // 
+            this.txtVehicleId.Location = new System.Drawing.Point(209, 27);
+            this.txtVehicleId.Mask = "aaaaa-aaaaa-aaaaa-aaaaa";
+            this.txtVehicleId.Name = "txtVehicleId";
+            this.txtVehicleId.Size = new System.Drawing.Size(324, 27);
+            this.txtVehicleId.TabIndex = 56;
             // 
             // label27
             // 
@@ -422,12 +464,12 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(4, 524);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(855, 110);
             this.dataGridView1.TabIndex = 51;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label17
             // 
@@ -516,6 +558,36 @@
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Options";
+            // 
+            // chkbHasPowerLock
+            // 
+            this.chkbHasPowerLock.AutoSize = true;
+            this.chkbHasPowerLock.Location = new System.Drawing.Point(21, 93);
+            this.chkbHasPowerLock.Name = "chkbHasPowerLock";
+            this.chkbHasPowerLock.Size = new System.Drawing.Size(129, 24);
+            this.chkbHasPowerLock.TabIndex = 59;
+            this.chkbHasPowerLock.Text = "Power Lock";
+            this.chkbHasPowerLock.UseVisualStyleBackColor = true;
+            // 
+            // chkbVehicleAutoTransmission
+            // 
+            this.chkbVehicleAutoTransmission.AutoSize = true;
+            this.chkbVehicleAutoTransmission.Location = new System.Drawing.Point(20, 33);
+            this.chkbVehicleAutoTransmission.Name = "chkbVehicleAutoTransmission";
+            this.chkbVehicleAutoTransmission.Size = new System.Drawing.Size(188, 24);
+            this.chkbVehicleAutoTransmission.TabIndex = 57;
+            this.chkbVehicleAutoTransmission.Text = "Auto Transmission";
+            this.chkbVehicleAutoTransmission.UseVisualStyleBackColor = true;
+            // 
+            // chkbHasAirCondition
+            // 
+            this.chkbHasAirCondition.AutoSize = true;
+            this.chkbHasAirCondition.Location = new System.Drawing.Point(20, 63);
+            this.chkbHasAirCondition.Name = "chkbHasAirCondition";
+            this.chkbHasAirCondition.Size = new System.Drawing.Size(140, 24);
+            this.chkbHasAirCondition.TabIndex = 58;
+            this.chkbHasAirCondition.Text = "Air Condition";
+            this.chkbHasAirCondition.UseVisualStyleBackColor = true;
             // 
             // btnVehicleSearch
             // 
@@ -651,17 +723,24 @@
             // 
             // Leaseing
             // 
-            this.Leaseing.Controls.Add(this.textBox16);
+            this.Leaseing.Controls.Add(this.btnLeaseCancelSearch);
+            this.Leaseing.Controls.Add(this.lblLeaseId);
+            this.Leaseing.Controls.Add(this.txtLeaseLeaseIdSearch);
+            this.Leaseing.Controls.Add(this.btnLeaseLeaseIdSearch);
+            this.Leaseing.Controls.Add(this.label32);
+            this.Leaseing.Controls.Add(this.lblLeaseTermId);
+            this.Leaseing.Controls.Add(this.lblLeaseCutomerId);
+            this.Leaseing.Controls.Add(this.txtLeaseCustomerPhoneNumber);
+            this.Leaseing.Controls.Add(this.txtLeaseVehicleId);
             this.Leaseing.Controls.Add(this.dataGridView2);
-            this.Leaseing.Controls.Add(this.button13);
-            this.Leaseing.Controls.Add(this.button9);
-            this.Leaseing.Controls.Add(this.textBox17);
+            this.Leaseing.Controls.Add(this.btnLeaseVehicleSearch);
+            this.Leaseing.Controls.Add(this.btnLeaseCustomerSearch);
             this.Leaseing.Controls.Add(this.label21);
             this.Leaseing.Controls.Add(this.groupBox2);
-            this.Leaseing.Controls.Add(this.button10);
-            this.Leaseing.Controls.Add(this.comboBox8);
-            this.Leaseing.Controls.Add(this.button12);
-            this.Leaseing.Controls.Add(this.button11);
+            this.Leaseing.Controls.Add(this.btnLeaseDelete);
+            this.Leaseing.Controls.Add(this.cmbLeaseYears);
+            this.Leaseing.Controls.Add(this.btnLeaseInsert);
+            this.Leaseing.Controls.Add(this.btnLeaseUpdate);
             this.Leaseing.Controls.Add(this.label25);
             this.Leaseing.Controls.Add(this.label26);
             this.Leaseing.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -669,55 +748,51 @@
             this.Leaseing.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Leaseing.Name = "Leaseing";
             this.Leaseing.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Leaseing.Size = new System.Drawing.Size(865, 644);
+            this.Leaseing.Size = new System.Drawing.Size(865, 696);
             this.Leaseing.TabIndex = 2;
             this.Leaseing.Text = "Leasing Page";
             this.Leaseing.UseVisualStyleBackColor = true;
             // 
-            // textBox16
+            // txtLeaseVehicleId
             // 
-            this.textBox16.Location = new System.Drawing.Point(319, 17);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(324, 27);
-            this.textBox16.TabIndex = 80;
+            this.txtLeaseVehicleId.Location = new System.Drawing.Point(319, 18);
+            this.txtLeaseVehicleId.Mask = "aaaaa-aaaaa-aaaaa-aaaaa";
+            this.txtLeaseVehicleId.Name = "txtLeaseVehicleId";
+            this.txtLeaseVehicleId.Size = new System.Drawing.Size(324, 27);
+            this.txtLeaseVehicleId.TabIndex = 80;
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(4, 522);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView2.Location = new System.Drawing.Point(0, 571);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(855, 118);
+            this.dataGridView2.Size = new System.Drawing.Size(855, 119);
             this.dataGridView2.TabIndex = 79;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
-            // button13
+            // btnLeaseVehicleSearch
             // 
-            this.button13.Location = new System.Drawing.Point(649, 14);
-            this.button13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(104, 34);
-            this.button13.TabIndex = 78;
-            this.button13.Text = "Search";
-            this.button13.UseVisualStyleBackColor = true;
+            this.btnLeaseVehicleSearch.Location = new System.Drawing.Point(649, 14);
+            this.btnLeaseVehicleSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLeaseVehicleSearch.Name = "btnLeaseVehicleSearch";
+            this.btnLeaseVehicleSearch.Size = new System.Drawing.Size(104, 34);
+            this.btnLeaseVehicleSearch.TabIndex = 78;
+            this.btnLeaseVehicleSearch.Text = "Search";
+            this.btnLeaseVehicleSearch.UseVisualStyleBackColor = true;
+            this.btnLeaseVehicleSearch.Click += new System.EventHandler(this.btnLeaseVehicleSearch_Click);
             // 
-            // button9
+            // btnLeaseCustomerSearch
             // 
-            this.button9.Location = new System.Drawing.Point(649, 58);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(104, 32);
-            this.button9.TabIndex = 77;
-            this.button9.Text = "Search";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(319, 60);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(324, 27);
-            this.textBox17.TabIndex = 75;
+            this.btnLeaseCustomerSearch.Location = new System.Drawing.Point(649, 58);
+            this.btnLeaseCustomerSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLeaseCustomerSearch.Name = "btnLeaseCustomerSearch";
+            this.btnLeaseCustomerSearch.Size = new System.Drawing.Size(104, 32);
+            this.btnLeaseCustomerSearch.TabIndex = 77;
+            this.btnLeaseCustomerSearch.Text = "Search";
+            this.btnLeaseCustomerSearch.UseVisualStyleBackColor = true;
+            this.btnLeaseCustomerSearch.Click += new System.EventHandler(this.btnLeaseCustomerSearch_Click);
             // 
             // label21
             // 
@@ -731,15 +806,15 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox15);
-            this.groupBox2.Controls.Add(this.textBox14);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
+            this.groupBox2.Controls.Add(this.txtLeaseMonthlyPaymentNumber);
+            this.groupBox2.Controls.Add(this.txtLeaseMonthlyPatmentAmount);
+            this.groupBox2.Controls.Add(this.txtLeasePremium);
+            this.groupBox2.Controls.Add(this.dtLeaseFirstPayment);
+            this.groupBox2.Controls.Add(this.dtLeaseDate);
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.label19);
             this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.textBox11);
+            this.groupBox2.Controls.Add(this.txtLeaseMileage);
             this.groupBox2.Controls.Add(this.label24);
             this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Controls.Add(this.label22);
@@ -752,45 +827,48 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lease Term";
             // 
-            // textBox15
+            // txtLeaseMonthlyPaymentNumber
             // 
-            this.textBox15.Location = new System.Drawing.Point(273, 277);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(324, 27);
-            this.textBox15.TabIndex = 78;
+            this.txtLeaseMonthlyPaymentNumber.Location = new System.Drawing.Point(273, 277);
+            this.txtLeaseMonthlyPaymentNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLeaseMonthlyPaymentNumber.Name = "txtLeaseMonthlyPaymentNumber";
+            this.txtLeaseMonthlyPaymentNumber.Size = new System.Drawing.Size(324, 27);
+            this.txtLeaseMonthlyPaymentNumber.TabIndex = 78;
             // 
-            // textBox14
+            // txtLeaseMonthlyPatmentAmount
             // 
-            this.textBox14.Location = new System.Drawing.Point(273, 229);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(324, 27);
-            this.textBox14.TabIndex = 77;
+            this.txtLeaseMonthlyPatmentAmount.Location = new System.Drawing.Point(273, 229);
+            this.txtLeaseMonthlyPatmentAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLeaseMonthlyPatmentAmount.Name = "txtLeaseMonthlyPatmentAmount";
+            this.txtLeaseMonthlyPatmentAmount.Size = new System.Drawing.Size(324, 27);
+            this.txtLeaseMonthlyPatmentAmount.TabIndex = 77;
             // 
-            // textBox9
+            // txtLeasePremium
             // 
-            this.textBox9.Location = new System.Drawing.Point(273, 181);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(324, 27);
-            this.textBox9.TabIndex = 76;
+            this.txtLeasePremium.Enabled = false;
+            this.txtLeasePremium.Location = new System.Drawing.Point(273, 181);
+            this.txtLeasePremium.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLeasePremium.Name = "txtLeasePremium";
+            this.txtLeasePremium.Size = new System.Drawing.Size(324, 27);
+            this.txtLeasePremium.TabIndex = 76;
             // 
-            // dateTimePicker2
+            // dtLeaseFirstPayment
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(273, 86);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(324, 27);
-            this.dateTimePicker2.TabIndex = 75;
+            this.dtLeaseFirstPayment.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtLeaseFirstPayment.Location = new System.Drawing.Point(273, 86);
+            this.dtLeaseFirstPayment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtLeaseFirstPayment.Name = "dtLeaseFirstPayment";
+            this.dtLeaseFirstPayment.Size = new System.Drawing.Size(324, 27);
+            this.dtLeaseFirstPayment.TabIndex = 75;
             // 
-            // dateTimePicker1
+            // dtLeaseDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(273, 37);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(324, 27);
-            this.dateTimePicker1.TabIndex = 74;
+            this.dtLeaseDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtLeaseDate.Location = new System.Drawing.Point(273, 37);
+            this.dtLeaseDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtLeaseDate.Name = "dtLeaseDate";
+            this.dtLeaseDate.Size = new System.Drawing.Size(324, 27);
+            this.dtLeaseDate.TabIndex = 74;
             // 
             // label20
             // 
@@ -821,13 +899,14 @@
             this.label18.TabIndex = 60;
             this.label18.Text = "Contract Date";
             // 
-            // textBox11
+            // txtLeaseMileage
             // 
-            this.textBox11.Location = new System.Drawing.Point(273, 133);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(324, 27);
-            this.textBox11.TabIndex = 58;
+            this.txtLeaseMileage.Enabled = false;
+            this.txtLeaseMileage.Location = new System.Drawing.Point(273, 133);
+            this.txtLeaseMileage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLeaseMileage.Name = "txtLeaseMileage";
+            this.txtLeaseMileage.Size = new System.Drawing.Size(324, 27);
+            this.txtLeaseMileage.TabIndex = 58;
             // 
             // label24
             // 
@@ -856,44 +935,49 @@
             this.label22.TabIndex = 55;
             this.label22.Text = "Monthly Payment Number";
             // 
-            // button10
+            // btnLeaseDelete
             // 
-            this.button10.Location = new System.Drawing.Point(533, 481);
-            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(104, 34);
-            this.button10.TabIndex = 62;
-            this.button10.Text = "Delete";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnLeaseDelete.Location = new System.Drawing.Point(533, 481);
+            this.btnLeaseDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLeaseDelete.Name = "btnLeaseDelete";
+            this.btnLeaseDelete.Size = new System.Drawing.Size(104, 34);
+            this.btnLeaseDelete.TabIndex = 62;
+            this.btnLeaseDelete.Text = "Delete";
+            this.btnLeaseDelete.UseVisualStyleBackColor = true;
+            this.btnLeaseDelete.Click += new System.EventHandler(this.btnLeaseDelete_Click);
             // 
-            // comboBox8
+            // cmbLeaseYears
             // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(319, 103);
-            this.comboBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(324, 28);
-            this.comboBox8.TabIndex = 67;
+            this.cmbLeaseYears.FormattingEnabled = true;
+            this.cmbLeaseYears.Location = new System.Drawing.Point(319, 103);
+            this.cmbLeaseYears.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbLeaseYears.Name = "cmbLeaseYears";
+            this.cmbLeaseYears.Size = new System.Drawing.Size(324, 28);
+            this.cmbLeaseYears.TabIndex = 67;
+            this.cmbLeaseYears.SelectedIndexChanged += new System.EventHandler(this.cmbLeaseYears_SelectedIndexChanged);
+            this.cmbLeaseYears.TabIndexChanged += new System.EventHandler(this.cmbLeaseYears_TabIndexChanged);
             // 
-            // button12
+            // btnLeaseInsert
             // 
-            this.button12.Location = new System.Drawing.Point(313, 481);
-            this.button12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(104, 34);
-            this.button12.TabIndex = 60;
-            this.button12.Text = "Insert";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnLeaseInsert.Location = new System.Drawing.Point(313, 481);
+            this.btnLeaseInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLeaseInsert.Name = "btnLeaseInsert";
+            this.btnLeaseInsert.Size = new System.Drawing.Size(104, 34);
+            this.btnLeaseInsert.TabIndex = 60;
+            this.btnLeaseInsert.Text = "Insert";
+            this.btnLeaseInsert.UseVisualStyleBackColor = true;
+            this.btnLeaseInsert.Click += new System.EventHandler(this.btnLeaseInsert_Click);
             // 
-            // button11
+            // btnLeaseUpdate
             // 
-            this.button11.Location = new System.Drawing.Point(424, 481);
-            this.button11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(104, 34);
-            this.button11.TabIndex = 61;
-            this.button11.Text = "Update";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnLeaseUpdate.Location = new System.Drawing.Point(424, 481);
+            this.btnLeaseUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLeaseUpdate.Name = "btnLeaseUpdate";
+            this.btnLeaseUpdate.Size = new System.Drawing.Size(104, 34);
+            this.btnLeaseUpdate.TabIndex = 61;
+            this.btnLeaseUpdate.Text = "Update";
+            this.btnLeaseUpdate.UseVisualStyleBackColor = true;
+            this.btnLeaseUpdate.Click += new System.EventHandler(this.btnLeaseUpdate_Click);
             // 
             // label25
             // 
@@ -915,67 +999,69 @@
             // 
             // Payment
             // 
-            this.Payment.Controls.Add(this.button15);
-            this.Payment.Controls.Add(this.textBox21);
+            this.Payment.Controls.Add(this.dataGridView3);
+            this.Payment.Controls.Add(this.btnPaymentInsert);
+            this.Payment.Controls.Add(this.txtPaymentLeaseId);
             this.Payment.Controls.Add(this.label31);
-            this.Payment.Controls.Add(this.textBox20);
-            this.Payment.Controls.Add(this.dateTimePicker3);
+            this.Payment.Controls.Add(this.txtPaymentAmount);
+            this.Payment.Controls.Add(this.dtPaymentDate);
             this.Payment.Controls.Add(this.label29);
             this.Payment.Controls.Add(this.label30);
-            this.Payment.Controls.Add(this.textBox19);
-            this.Payment.Controls.Add(this.button14);
+            this.Payment.Controls.Add(this.txtPaymentLeaseIdSearch);
+            this.Payment.Controls.Add(this.btnPaymentLeaseIdSearch);
             this.Payment.Controls.Add(this.label28);
             this.Payment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Payment.Location = new System.Drawing.Point(4, 29);
             this.Payment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Payment.Name = "Payment";
-            this.Payment.Size = new System.Drawing.Size(865, 644);
+            this.Payment.Size = new System.Drawing.Size(865, 696);
             this.Payment.TabIndex = 3;
             this.Payment.Text = "Payments Page";
             this.Payment.UseVisualStyleBackColor = true;
             // 
-            // textBox19
+            // btnPaymentInsert
             // 
-            this.textBox19.Location = new System.Drawing.Point(167, 21);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(324, 27);
-            this.textBox19.TabIndex = 83;
+            this.btnPaymentInsert.Location = new System.Drawing.Point(167, 267);
+            this.btnPaymentInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPaymentInsert.Name = "btnPaymentInsert";
+            this.btnPaymentInsert.Size = new System.Drawing.Size(324, 34);
+            this.btnPaymentInsert.TabIndex = 90;
+            this.btnPaymentInsert.Text = "Insert";
+            this.btnPaymentInsert.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // txtPaymentLeaseId
             // 
-            this.button14.Location = new System.Drawing.Point(497, 17);
-            this.button14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(104, 34);
-            this.button14.TabIndex = 82;
-            this.button14.Text = "Search";
-            this.button14.UseVisualStyleBackColor = true;
+            this.txtPaymentLeaseId.Location = new System.Drawing.Point(167, 131);
+            this.txtPaymentLeaseId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPaymentLeaseId.Name = "txtPaymentLeaseId";
+            this.txtPaymentLeaseId.Size = new System.Drawing.Size(324, 27);
+            this.txtPaymentLeaseId.TabIndex = 89;
             // 
-            // label28
+            // label31
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(34, 24);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(81, 20);
-            this.label28.TabIndex = 81;
-            this.label28.Text = "Lease Id";
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(34, 134);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(81, 20);
+            this.label31.TabIndex = 88;
+            this.label31.Text = "Lease Id";
             // 
-            // textBox20
+            // txtPaymentAmount
             // 
-            this.textBox20.Location = new System.Drawing.Point(167, 227);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(324, 27);
-            this.textBox20.TabIndex = 87;
+            this.txtPaymentAmount.Location = new System.Drawing.Point(167, 227);
+            this.txtPaymentAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPaymentAmount.Name = "txtPaymentAmount";
+            this.txtPaymentAmount.Size = new System.Drawing.Size(324, 27);
+            this.txtPaymentAmount.TabIndex = 87;
             // 
-            // dateTimePicker3
+            // dtPaymentDate
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(167, 180);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(324, 27);
-            this.dateTimePicker3.TabIndex = 86;
+            this.dtPaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtPaymentDate.Location = new System.Drawing.Point(167, 180);
+            this.dtPaymentDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtPaymentDate.Name = "dtPaymentDate";
+            this.dtPaymentDate.Size = new System.Drawing.Size(324, 27);
+            this.dtPaymentDate.TabIndex = 86;
             // 
             // label29
             // 
@@ -995,101 +1081,121 @@
             this.label30.TabIndex = 84;
             this.label30.Text = "Date";
             // 
-            // textBox21
+            // txtPaymentLeaseIdSearch
             // 
-            this.textBox21.Location = new System.Drawing.Point(167, 131);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(324, 27);
-            this.textBox21.TabIndex = 89;
+            this.txtPaymentLeaseIdSearch.Location = new System.Drawing.Point(167, 21);
+            this.txtPaymentLeaseIdSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPaymentLeaseIdSearch.Name = "txtPaymentLeaseIdSearch";
+            this.txtPaymentLeaseIdSearch.Size = new System.Drawing.Size(324, 27);
+            this.txtPaymentLeaseIdSearch.TabIndex = 83;
             // 
-            // label31
+            // btnPaymentLeaseIdSearch
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(34, 134);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(81, 20);
-            this.label31.TabIndex = 88;
-            this.label31.Text = "Lease Id";
+            this.btnPaymentLeaseIdSearch.Location = new System.Drawing.Point(497, 17);
+            this.btnPaymentLeaseIdSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPaymentLeaseIdSearch.Name = "btnPaymentLeaseIdSearch";
+            this.btnPaymentLeaseIdSearch.Size = new System.Drawing.Size(104, 34);
+            this.btnPaymentLeaseIdSearch.TabIndex = 82;
+            this.btnPaymentLeaseIdSearch.Text = "Search";
+            this.btnPaymentLeaseIdSearch.UseVisualStyleBackColor = true;
             // 
-            // txtCustomerPhoneNumber
+            // label28
             // 
-            this.txtCustomerPhoneNumber.Location = new System.Drawing.Point(212, 271);
-            this.txtCustomerPhoneNumber.Mask = "(999) 000-0000";
-            this.txtCustomerPhoneNumber.Name = "txtCustomerPhoneNumber";
-            this.txtCustomerPhoneNumber.Size = new System.Drawing.Size(324, 27);
-            this.txtCustomerPhoneNumber.TabIndex = 55;
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(34, 24);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(81, 20);
+            this.label28.TabIndex = 81;
+            this.label28.Text = "Lease Id";
             // 
-            // txtVehicleId
+            // txtLeaseCustomerPhoneNumber
             // 
-            this.txtVehicleId.Location = new System.Drawing.Point(209, 27);
-            this.txtVehicleId.Mask = "aaaaa-aaaaa-aaaaa-aaaaa";
-            this.txtVehicleId.Name = "txtVehicleId";
-            this.txtVehicleId.Size = new System.Drawing.Size(324, 27);
-            this.txtVehicleId.TabIndex = 56;
+            this.txtLeaseCustomerPhoneNumber.Location = new System.Drawing.Point(319, 61);
+            this.txtLeaseCustomerPhoneNumber.Mask = "(999) 000-0000";
+            this.txtLeaseCustomerPhoneNumber.Name = "txtLeaseCustomerPhoneNumber";
+            this.txtLeaseCustomerPhoneNumber.Size = new System.Drawing.Size(324, 27);
+            this.txtLeaseCustomerPhoneNumber.TabIndex = 81;
             // 
-            // button15
+            // lblLeaseCutomerId
             // 
-            this.button15.Location = new System.Drawing.Point(167, 267);
-            this.button15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(324, 34);
-            this.button15.TabIndex = 90;
-            this.button15.Text = "Insert";
-            this.button15.UseVisualStyleBackColor = true;
+            this.lblLeaseCutomerId.AutoSize = true;
+            this.lblLeaseCutomerId.Location = new System.Drawing.Point(760, 62);
+            this.lblLeaseCutomerId.Name = "lblLeaseCutomerId";
+            this.lblLeaseCutomerId.Size = new System.Drawing.Size(0, 20);
+            this.lblLeaseCutomerId.TabIndex = 82;
+            this.lblLeaseCutomerId.Visible = false;
             // 
-            // lblCustomerId
+            // lblLeaseTermId
             // 
-            this.lblCustomerId.AutoSize = true;
-            this.lblCustomerId.Location = new System.Drawing.Point(691, 32);
-            this.lblCustomerId.Name = "lblCustomerId";
-            this.lblCustomerId.Size = new System.Drawing.Size(0, 20);
-            this.lblCustomerId.TabIndex = 56;
-            this.lblCustomerId.Visible = false;
+            this.lblLeaseTermId.AutoSize = true;
+            this.lblLeaseTermId.Location = new System.Drawing.Point(650, 113);
+            this.lblLeaseTermId.Name = "lblLeaseTermId";
+            this.lblLeaseTermId.Size = new System.Drawing.Size(0, 20);
+            this.lblLeaseTermId.TabIndex = 83;
+            this.lblLeaseTermId.Visible = false;
             // 
-            // txtCustomerPhoneNumberSearch
+            // btnLeaseLeaseIdSearch
             // 
-            this.txtCustomerPhoneNumberSearch.Location = new System.Drawing.Point(212, 359);
-            this.txtCustomerPhoneNumberSearch.Mask = "(999) 000-0000";
-            this.txtCustomerPhoneNumberSearch.Name = "txtCustomerPhoneNumberSearch";
-            this.txtCustomerPhoneNumberSearch.Size = new System.Drawing.Size(214, 27);
-            this.txtCustomerPhoneNumberSearch.TabIndex = 57;
+            this.btnLeaseLeaseIdSearch.Location = new System.Drawing.Point(533, 519);
+            this.btnLeaseLeaseIdSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLeaseLeaseIdSearch.Name = "btnLeaseLeaseIdSearch";
+            this.btnLeaseLeaseIdSearch.Size = new System.Drawing.Size(104, 34);
+            this.btnLeaseLeaseIdSearch.TabIndex = 85;
+            this.btnLeaseLeaseIdSearch.Text = "Search";
+            this.btnLeaseLeaseIdSearch.UseVisualStyleBackColor = true;
+            this.btnLeaseLeaseIdSearch.Click += new System.EventHandler(this.btnLeaseLeaseIdSearch_Click);
             // 
-            // chkbVehicleAutoTransmission
+            // label32
             // 
-            this.chkbVehicleAutoTransmission.AutoSize = true;
-            this.chkbVehicleAutoTransmission.Location = new System.Drawing.Point(20, 33);
-            this.chkbVehicleAutoTransmission.Name = "chkbVehicleAutoTransmission";
-            this.chkbVehicleAutoTransmission.Size = new System.Drawing.Size(188, 24);
-            this.chkbVehicleAutoTransmission.TabIndex = 57;
-            this.chkbVehicleAutoTransmission.Text = "Auto Transmission";
-            this.chkbVehicleAutoTransmission.UseVisualStyleBackColor = true;
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(45, 524);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(231, 20);
+            this.label32.TabIndex = 84;
+            this.label32.Text = "Search Lease By Lease Id";
             // 
-            // chkbHasAirCondition
+            // txtLeaseLeaseIdSearch
             // 
-            this.chkbHasAirCondition.AutoSize = true;
-            this.chkbHasAirCondition.Location = new System.Drawing.Point(20, 63);
-            this.chkbHasAirCondition.Name = "chkbHasAirCondition";
-            this.chkbHasAirCondition.Size = new System.Drawing.Size(140, 24);
-            this.chkbHasAirCondition.TabIndex = 58;
-            this.chkbHasAirCondition.Text = "Air Condition";
-            this.chkbHasAirCondition.UseVisualStyleBackColor = true;
+            this.txtLeaseLeaseIdSearch.Location = new System.Drawing.Point(313, 523);
+            this.txtLeaseLeaseIdSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLeaseLeaseIdSearch.Name = "txtLeaseLeaseIdSearch";
+            this.txtLeaseLeaseIdSearch.Size = new System.Drawing.Size(214, 27);
+            this.txtLeaseLeaseIdSearch.TabIndex = 86;
             // 
-            // chkbHasPowerLock
+            // lblLeaseId
             // 
-            this.chkbHasPowerLock.AutoSize = true;
-            this.chkbHasPowerLock.Location = new System.Drawing.Point(21, 93);
-            this.chkbHasPowerLock.Name = "chkbHasPowerLock";
-            this.chkbHasPowerLock.Size = new System.Drawing.Size(129, 24);
-            this.chkbHasPowerLock.TabIndex = 59;
-            this.chkbHasPowerLock.Text = "Power Lock";
-            this.chkbHasPowerLock.UseVisualStyleBackColor = true;
+            this.lblLeaseId.AutoSize = true;
+            this.lblLeaseId.Location = new System.Drawing.Point(650, 519);
+            this.lblLeaseId.Name = "lblLeaseId";
+            this.lblLeaseId.Size = new System.Drawing.Size(0, 20);
+            this.lblLeaseId.TabIndex = 87;
+            this.lblLeaseId.Visible = false;
+            // 
+            // btnLeaseCancelSearch
+            // 
+            this.btnLeaseCancelSearch.Location = new System.Drawing.Point(643, 519);
+            this.btnLeaseCancelSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLeaseCancelSearch.Name = "btnLeaseCancelSearch";
+            this.btnLeaseCancelSearch.Size = new System.Drawing.Size(104, 34);
+            this.btnLeaseCancelSearch.TabIndex = 88;
+            this.btnLeaseCancelSearch.Text = "Cancel";
+            this.btnLeaseCancelSearch.UseVisualStyleBackColor = true;
+            this.btnLeaseCancelSearch.Click += new System.EventHandler(this.btnLeaseCancelSearch_Click);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(4, 361);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(855, 260);
+            this.dataGridView3.TabIndex = 91;
             // 
             // MultiLeaseMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 711);
+            this.ClientSize = new System.Drawing.Size(878, 771);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -1114,6 +1220,7 @@
             this.groupBox2.PerformLayout();
             this.Payment.ResumeLayout(false);
             this.Payment.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1170,49 +1277,57 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.ComboBox cmbLeaseYears;
+        private System.Windows.Forms.Button btnLeaseDelete;
+        private System.Windows.Forms.Button btnLeaseUpdate;
+        private System.Windows.Forms.Button btnLeaseInsert;
+        private System.Windows.Forms.TextBox txtLeaseMileage;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtLeaseMonthlyPaymentNumber;
+        private System.Windows.Forms.TextBox txtLeaseMonthlyPatmentAmount;
+        private System.Windows.Forms.TextBox txtLeasePremium;
+        private System.Windows.Forms.DateTimePicker dtLeaseFirstPayment;
+        private System.Windows.Forms.DateTimePicker dtLeaseDate;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Button btnLeaseVehicleSearch;
+        private System.Windows.Forms.Button btnLeaseCustomerSearch;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.TextBox txtPaymentLeaseIdSearch;
+        private System.Windows.Forms.Button btnPaymentLeaseIdSearch;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.TextBox txtPaymentLeaseId;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.TextBox txtPaymentAmount;
+        private System.Windows.Forms.DateTimePicker dtPaymentDate;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.MaskedTextBox txtCustomerPhoneNumber;
         private System.Windows.Forms.MaskedTextBox txtVehicleId;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button btnPaymentInsert;
         private System.Windows.Forms.Label lblCustomerId;
         private System.Windows.Forms.MaskedTextBox txtCustomerPhoneNumberSearch;
         private System.Windows.Forms.CheckBox chkbHasPowerLock;
         private System.Windows.Forms.CheckBox chkbVehicleAutoTransmission;
         private System.Windows.Forms.CheckBox chkbHasAirCondition;
+        private System.Windows.Forms.MaskedTextBox txtLeaseVehicleId;
+        private System.Windows.Forms.MaskedTextBox txtLeaseCustomerPhoneNumber;
+        private System.Windows.Forms.Label lblLeaseCutomerId;
+        private System.Windows.Forms.Label lblLeaseTermId;
+        private System.Windows.Forms.TextBox txtLeaseLeaseIdSearch;
+        private System.Windows.Forms.Button btnLeaseLeaseIdSearch;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label lblLeaseId;
+        private System.Windows.Forms.Button btnLeaseCancelSearch;
+        private System.Windows.Forms.DataGridView dataGridView3;
     }
 }
